@@ -1,0 +1,14 @@
+<html>
+<head>
+	<title>Product Form</title>
+</head>
+<body>
+
+	<form method='POST'>
+		{% csrf_token %}
+		{{forms.as_p}}
+		<input type='submit' />
+	</form>
+
+</body>
+</html>

@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Product Page</title>
+</head>
+<body>
+<h1>Form</h1>
+<form enctype="multipart/form-data" method='POST'>
+	{% csrf_token %}
+	{{forms.as_p}}
+	<input type="submit" name="Submit">
+</form>
+</body>
+</html>

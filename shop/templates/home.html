@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Home Page</title>
+</head>
+<body>
+ <marquee><h1>Gadgets Shop.</h1></marquee>
+ <a href="/add/product/">Add a Product</a>
+ <center><table border="0" cellpadding ="5" >
+ 	 
+ 	<tr>
+ 		<th colspan="30" align="center">Name</th>
+ 		<th colspan="30" align="center">Category</th>
+ 		<th colspan="30" align="center">Price</th>
+ 		<th colspan="30" align="center">Image</th>
+ 		<th></th>
+ 		<th></th>
+ 	</tr>
+ 	{% for p in product %} 
+ 	<tr>
+ 		<td colspan="30" align="center">{{p.name}}</td>
+ 		<td colspan="30" align="center">{{p.category}}</td>
+ 		<td colspan="30" align="center">{{p.price}}</td>
+ 		<td colspan="30" align="center"><img src = '/media/{{p.image}}' height="150" width="150"></td>
+ 		<td><a href='/update/product/{{p.id}}'>update</a></td>
+		<td><a href='/delete/product/{{p.id}}'>delete</a></td>
+ 	</tr>
+ 	 {% endfor %}
+ </table>
+</center>
+ <!-- {% for p in product %}
+ Name:{{p.name}}<br>
+ Category:{{p.category}}<br>
+ Price:{{p.price}}<br>
+ <img src = '/media/{{p.image}}' height="100" width="100"><br>
+ {% endfor %} -->
+</body>
+</html>
